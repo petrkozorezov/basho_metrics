@@ -118,10 +118,10 @@ public:
         return fifteen_.rate();
     }
 private:
-    unsigned long count_;
     ewma one_;
     ewma five_;
     ewma fifteen_;
+    unsigned long count_;
     unsigned long start_time_;
 };
 

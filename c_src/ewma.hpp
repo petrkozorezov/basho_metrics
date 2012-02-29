@@ -78,9 +78,9 @@ public:
 
 private:
     double rate_;
-    unsigned long uncounted_;
     double alpha_;
     double interval_;
+    unsigned long uncounted_;
     bool initialized_;
 };
 

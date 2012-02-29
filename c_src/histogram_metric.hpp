@@ -146,7 +146,7 @@ public:
     /**
      * Returns an array of values at percentiles passed in pvec
      */    
-    std::vector<double> percentiles(const std::vector<double> pvec)
+    std::vector<double> percentiles(const std::vector<double>& pvec)
     {
         std::vector<double> scores(pvec.size(), 0.0);
         if (count_)
@@ -185,11 +185,11 @@ private:
     }
 private:
     uniform_sample<IntType> sample_;
+    std::pair<double, double> variance_;
     IntType min_;
     IntType max_;
     IntType sum_;
     IntType count_;
-    std::pair<double, double> variance_;
 };
 
 
